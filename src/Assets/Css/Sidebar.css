@@ -16,6 +16,8 @@
     height: 170px;
     border-radius: 20px;
     object-fit: cover;
+    object-position: center 20%;
+    /* Iangat ang image para kita ang mukha */
     display: block;
     margin: auto;
     cursor: pointer;

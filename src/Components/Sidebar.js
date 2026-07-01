@@ -1,5 +1,6 @@
 import { useState } from "react";
-import profile from "../Assets/Images/rs.png";
+import profile from "../Assets/Images/rs1.png";      // Profile picture
+import profileFull from "../Assets/Images/rs.png"; // Full picture for modal
 import "../Assets/Css/Sidebar.css";
 
 function Sidebar() {
@@ -44,7 +45,7 @@ function Sidebar() {
                         onClick={(e) => e.stopPropagation()}
                     >
                         <img
-                            src={profile}
+                            src={profileFull}
                             alt="Real Sullera"
                             className="modal-image"
                         />
