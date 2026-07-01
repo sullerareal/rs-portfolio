@@ -1,0 +1,42 @@
+.App-header {
+    display: flex;
+    min-height: 100vh;
+    color: white;
+}
+
+.container2 {
+    margin-left: 630px;
+    margin-right: 300px;
+    border: 1px solid #2b2c35;
+    width: calc(100% - 380px);
+    margin-top: 30px;
+    background: #17181f;
+    border-radius: 22px;
+    height: calc(200vh - 60px);
+    margin-bottom: 30px;
+}
+
+.title1 {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    font-size: 35px;
+    font-weight: 600;
+    margin-left: 30px;
+    padding-top: 30px;
+}
+
+.content {
+    padding: 0 30px 30px;
+    width: 100%;
+}
+
+.line {
+    width: 80px;
+    height: 5px;
+    background: #f8c857;
+    margin: 20px 0;
+    border-radius: 10px;
+}

@@ -1,0 +1,21 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 60%;
+    background: #1b1d26;
+    border-radius: 0 22px 0 22px;
+    padding: 25px;
+    font-weight: 600;
+    margin-left: auto;
+}
+
+.navbar a {
+    color: rgb(156, 145, 145);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.active {
+    color: #f8c857 !important;
+}
