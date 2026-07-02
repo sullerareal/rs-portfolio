@@ -1,0 +1,112 @@
+.contactCard {
+    background: #1B1D26;
+    border-radius: 15px;
+    padding: 45px;
+    margin: 25px 0;
+    color: white;
+    text-align: center;
+}
+
+.contactTitle {
+    font-size: 46px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.contactText {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 29px;
+    color: #cfcfcf;
+    font-size: 22px;
+}
+
+.socialTitle {
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+
+.socialLinks {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.socialLinks a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 25px;
+    color: #f8c857;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.socialLinks a:hover {
+    transform: translateY(-5px);
+    color: #e7ab1e;
+
+}
+
+.socialLinks svg {
+    font-size: 50px;
+}
+
+/* Contact Form */
+.emailTitle {
+    font-size: 26px;
+    justify-self: start;
+    margin-bottom: 30px;
+
+}
+
+.contactForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.buttonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.leftInputs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.leftInputs input,
+.contactForm textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    font-size: 16px;
+}
+
+.contactForm textarea {
+    flex: 2;
+    min-height: 140px;
+    resize: none;
+}
+
+.contactForm button {
+    margin-top: 15px;
+    padding: 12px 28px;
+    background: #f8c857;
+    color: #1B1D26;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contactForm button:hover {
+    background: #e7ab1e;
+}
