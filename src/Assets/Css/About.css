@@ -1,9 +1,10 @@
 .aboutCard {
-    background: #1a1b22;
+    background: #1B1D26;
     border-radius: 20px;
     padding: 35px;
     line-height: 1.8;
     color: #d5d5d5;
+    margin-bottom: 30px;
 }
 
 .sectionTitle {
