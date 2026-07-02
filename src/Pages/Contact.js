@@ -49,7 +49,7 @@ function Contact() {
                 </div>
             </div>
 
-            {/* Contact Form */}
+            {/* Contact Form
             <div className="contactCard">
                 <p className="emailTitle">
                     Send me an email
@@ -65,6 +65,32 @@ function Contact() {
 
                     <div className="buttonContainer">
                         <button type="submit">Send Email</button>
+                    </div>
+                </form>
+            </div> */}
+
+            {/* Contact Form */}
+            <div className="contactCard emailCard">
+                <p className="emailTitle">
+                    Send me an email
+                </p>
+
+                <div className="emailUnavailable">
+                    <div className="xMark">✕</div>
+                    <p>Temporarily Unavailable</p>
+                </div>
+
+                <form className="contactForm disabledForm">
+                    <div className="leftInputs">
+                        <input type="text" placeholder="Name" disabled />
+                        <input type="email" placeholder="Email" disabled />
+                        <textarea placeholder="Message" disabled></textarea>
+                    </div>
+
+                    <div className="buttonContainer">
+                        <button type="submit" disabled>
+                            Send Email
+                        </button>
                     </div>
                 </form>
             </div>
