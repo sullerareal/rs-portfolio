@@ -1,0 +1,115 @@
+/* ==========================================
+   Certificate Intro
+========================================== */
+
+.certificateIntro {
+    text-align: center;
+    margin-bottom: 50px;
+    animation: fadeUp .8s ease;
+}
+
+.certificateIcon {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 42px;
+    background: linear-gradient(135deg, #FFD54F, #F9A825);
+    box-shadow: 0 10px 30px rgba(255, 193, 7, .35);
+}
+
+.certificateIntro p {
+    color: #c7c7c7;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 650px;
+    margin: auto;
+}
+
+/* ==========================================
+   Grid
+========================================== */
+
+.certificateGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 35px;
+    padding: 20px 0 40px;
+}
+
+/* ==========================================
+   Card
+========================================== */
+
+.certificateCard {
+    display: block;
+    padding: 15px;
+    overflow: hidden;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all .35s ease;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .25);
+    text-decoration: none;
+}
+
+.certificateCard:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 213, 79, .4);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .45);
+}
+
+/* ==========================================
+   Image
+========================================== */
+
+.certificateImage {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    background: #181922;
+    border-radius: 16px;
+    transition: transform .4s ease;
+}
+
+.certificateCard:hover .certificateImage {
+    transform: scale(1.03);
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width: 768px) {
+
+    .certificateGrid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .certificateImage {
+        height: 240px;
+    }
+
+}
+
+/* ==========================================
+   Animation
+========================================== */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
