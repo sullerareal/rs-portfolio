@@ -74,10 +74,12 @@
     object-fit: contain;
     background: #181922;
     border-radius: 16px;
-    transition: transform .4s ease;
+    filter: grayscale(100%) brightness(0.8);
+    transition: transform .4s ease, filter .4s ease;
 }
 
 .certificateCard:hover .certificateImage {
+    filter: grayscale(0%) brightness(1);
     transform: scale(1.03);
 }
 
