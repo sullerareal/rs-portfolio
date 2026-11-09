@@ -19,7 +19,7 @@ function Experience() {
             <div className="experienceContainer">
 
                 {/* Introduction */}
-                <div className="experienceHeader">
+                {/* <div className="experienceHeader">
                     <span className="experienceLabel">
                         MY PROFESSIONAL JOURNEY
                     </span>
@@ -33,7 +33,7 @@ function Experience() {
                         application maintenance, technical support, and
                         basic SQL support.
                     </p>
-                </div>
+                </div> */}
 
                 {/* Current Employment */}
                 <div className="experienceCard">

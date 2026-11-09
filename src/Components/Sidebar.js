@@ -136,27 +136,56 @@ function Sidebar() {
 
                 <hr className="divider" />
 
+
                 <div className="info">
                     <div className="techStack">
                         <div className="stackIcons1">
 
-                            <div className="tech1">
+                            <a
+                                href="https://github.com/sullerareal"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="tech1"
+                                aria-label="GitHub"
+                            >
                                 <FaGithub />
-                            </div>
-                            <div className="tech1">
+                            </a>
+
+                            <a
+                                href="https://web.facebook.com/sullerareal21"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="tech1"
+                                aria-label="Facebook"
+                            >
                                 <FaFacebook />
-                            </div>
-                            <div className="tech1">
+                            </a>
 
+                            <a
+                                href="https://ph.linkedin.com/in/real-sullera"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="tech1"
+                                aria-label="LinkedIn"
+                            >
                                 <FaLinkedin />
-                            </div>
-                            <div className="tech1">
+                            </a>
 
+                            <a
+                                href="https://www.instagram.com/rlsllr21"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="tech1"
+                                aria-label="Instagram"
+                            >
                                 <FaInstagram />
-                            </div>
+                            </a>
+
                         </div>
                     </div>
                 </div>
+
+
 
                 <div className="info">
                     <a

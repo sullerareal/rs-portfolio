@@ -98,6 +98,7 @@
     color: #4a90e2;
 }
 
+
 /* =========================
    Social Icons
 ========================= */
@@ -110,17 +111,20 @@
     gap: 8px;
     text-align: center;
     cursor: pointer;
+    text-decoration: none;
+    color: inherit;
 }
 
 .tech1 svg {
     font-size: 32px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.tech1 svg:hover {
+.tech1:hover svg {
     transform: scale(1.15);
     color: #e7ab1e;
 }
+
 
 /* =========================
    Profile

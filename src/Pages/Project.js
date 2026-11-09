@@ -19,6 +19,8 @@ function Project() {
         {
             title: "PDIC",
             category: "APPLICATION SUPPORT",
+            about:
+                "An Integrated Procurement, Property, Fixed Assets and Supplies System designed to manage procurement processes, property records, fixed assets, and supplies within the organization.",
             description:
                 "Provided application support by investigating and resolving issues encountered by end users while using the existing system.",
             contributions: [
@@ -30,22 +32,29 @@ function Project() {
             image: SSS,
             icon: <FaTools />
         },
+
         {
             title: "ARIS Rebuild",
-            category: "MODULE DEVELOPMENT",
+            category: "SYSTEM REBUILD & UI ENHANCEMENT",
+            about:
+                "A modernized version of the existing procurement and inventory management system, featuring a more organized codebase, improved code readability, and a more user-friendly interface.",
             description:
-                "Participated in the rebuilding of the ARIS system by contributing to the development of one of its modules and making modifications to existing user interfaces.",
+                "Participated in the system rebuild by contributing to module development and improving existing user interfaces to provide a more accessible and user-friendly experience.",
             contributions: [
                 "Module development",
-                "UI modifications",
-                "Application enhancement"
+                "Codebase enhancement",
+                "UI improvements",
+                "User experience enhancement"
             ],
             image: SSS,
             icon: <FaCode />
         },
+
         {
             title: "SSS",
             category: "ONSITE TECHNICAL SUPPORT",
+            about:
+                "A Procurement and Inventory Management System used to manage procurement activities, monitor inventory, and track organizational supplies.",
             description:
                 "Provided onsite technical support by assisting users with daily system issues and helping address database-related concerns.",
             contributions: [
@@ -57,19 +66,19 @@ function Project() {
             image: SSS,
             icon: <FaDatabase />
         },
-        {
-            title: "Attendance Monitoring System",
-            category: "ACADEMIC THESIS PROJECT",
-            description:
-                "Contributed to the development of an Attendance Monitoring System for an academic thesis project, focusing on designing and developing its user interface.",
-            contributions: [
-                "User interface development",
-                "UI design",
-                "System layout"
-            ],
-            image: SSS,
-            icon: <FaLaptopCode />
-        }
+        // {
+        //     title: "Attendance Monitoring System",
+        //     category: "ACADEMIC THESIS PROJECT",
+        //     description:
+        //         "Contributed to the development of an Attendance Monitoring System for an academic thesis project, focusing on designing and developing its user interface.",
+        //     contributions: [
+        //         "User interface development",
+        //         "UI design",
+        //         "System layout"
+        //     ],
+        //     image: SSS,
+        //     icon: <FaLaptopCode />
+        // }
     ];
 
     // Tutorial-based UI/UX practice designs
@@ -113,36 +122,17 @@ function Project() {
 
             <div className="line"></div>
 
-            {/* PAGE INTRODUCTION */}
-            {/* <div className="projectHeader">
-                <span className="projectLabel">
-                    MY WORK & CONTRIBUTIONS
-                </span>
-
-                <h1>
-                    Projects & <span>System Contributions</span>
-                </h1>
-
-                <p>
-                    Here are the systems and projects I have been
-                    involved in throughout my professional and
-                    academic experience. My contributions include
-                    application support, module development,
-                    UI enhancements, and technical support.
-                </p>
-            </div> */}
-
             {/* PROFESSIONAL AND ACADEMIC PROJECTS */}
             <div className="projectSection">
 
-                <h2 className="projectSectionTitle">
+                {/* <h2 className="projectSectionTitle">
                     Professional & Academic Contributions
-                </h2>
+                </h2> */}
 
-                <p className="projectSectionDescription">
+                {/* <p className="projectSectionDescription">
                     Systems I have worked with through my professional
-                    experience and academic projects.
-                </p>
+                    experience.
+                </p> */}
 
                 <div className="projectGrid">
 
@@ -179,11 +169,23 @@ function Project() {
 
                                 <h2>{project.title}</h2>
 
+                                {/* ABOUT THE SYSTEM */}
+                                {project.about && (
+                                    <>
+                                        {/* <h4>About the System</h4> */}
+
+                                        <p className="projectDescription">
+                                            {project.about}
+                                        </p>
+                                    </>
+                                )}
+
+                                {/* PROJECT DESCRIPTION */}
+                                <h4>Role & Contributions</h4>
+
                                 <p className="projectDescription">
                                     {project.description}
                                 </p>
-
-                                <h4>My Contributions</h4>
 
                                 <div className="contributionTags">
                                     {project.contributions.map(
@@ -208,20 +210,14 @@ function Project() {
 
                 <div className="designHeader">
 
-                    <span className="projectLabel">
-                        PERSONAL LEARNING & PRACTICE
-                    </span>
-
                     <h2 className="projectSectionTitle">
-                        UI/UX Design Explorations
+                        UI/UX Design Projects
                     </h2>
 
                     <p className="projectSectionDescription">
-                        These are UI/UX designs I created while following
-                        online tutorials and exploring different
-                        interface layouts. These practice projects
-                        help me improve my design skills and
-                        understanding of user experience.
+                        A collection of personal projects and design
+                        explorations created through tutorials and
+                        hands-on practice to develop my UI/UX skills.
                     </p>
 
                 </div>
@@ -259,7 +255,9 @@ function Project() {
 
                                 <div className="contributionTags">
                                     {design.tools.map((tool, i) => (
-                                        <span key={i}>{tool}</span>
+                                        <span key={i}>
+                                            {tool}
+                                        </span>
                                     ))}
                                 </div>
 
