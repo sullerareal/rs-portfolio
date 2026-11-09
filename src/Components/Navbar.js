@@ -21,11 +21,18 @@ function Navbar() {
             </NavLink>
 
             <NavLink
+                to="/experience"
+                className={({ isActive }) => isActive ? "active" : ""}
+            >
+                Experience
+            </NavLink>
+
+            {/* <NavLink
                 to="/sidequest"
                 className={({ isActive }) => isActive ? "active" : ""}
             >
                 Side Quest
-            </NavLink>
+            </NavLink> */}
 
             <NavLink
                 to="/certificate"

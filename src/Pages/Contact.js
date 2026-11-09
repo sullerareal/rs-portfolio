@@ -49,7 +49,7 @@ function Contact() {
                 </div>
             </div>
 
-            {/* Contact Form
+            {/* Contact Form*/}
             <div className="contactCard">
                 <p className="emailTitle">
                     Send me an email
@@ -67,10 +67,10 @@ function Contact() {
                         <button type="submit">Send Email</button>
                     </div>
                 </form>
-            </div> */}
+            </div>
 
             {/* Contact Form */}
-            <div className="contactCard emailCard">
+            {/* <div className="contactCard emailCard">
                 <p className="emailTitle">
                     Send me an email
                 </p>
@@ -93,7 +93,7 @@ function Contact() {
                         </button>
                     </div>
                 </form>
-            </div>
+            </div> */}
         </Layout>
     );
 }

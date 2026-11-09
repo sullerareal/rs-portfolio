@@ -1,0 +1,243 @@
+/* PAGE HEADER */
+
+/* .projectHeader {
+    margin: 30px 0 45px;
+}
+
+.projectLabel {
+    color: #f8c857;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.projectHeader h1 {
+    font-size: 32px;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.projectHeader h1 span {
+    color: #f8c857;
+}
+
+.projectHeader p {
+    color: #aaa;
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 750px;
+} */
+
+/* PROJECT SECTIONS */
+
+.projectSection {
+    margin-bottom: 65px;
+}
+
+.projectSectionTitle {
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.projectSectionTitle span {
+    color: #f8c857;
+}
+
+.projectSectionDescription {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 750px;
+    margin-bottom: 25px;
+}
+
+/* PROJECT GRID */
+
+.projectGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+/* PROJECT CARD */
+
+.projectCard {
+    background: #1b1d26;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    transition: .3s ease;
+}
+
+.projectCard:hover {
+    transform: translateY(-6px);
+    border: 1px solid #f8c857;
+}
+
+/* PROJECT IMAGE */
+
+.projectImage {
+    width: 100%;
+    height: 210px;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    overflow: hidden;
+}
+
+/* PROJECT SCREENSHOT */
+
+.projectScreenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: inherit;
+}
+
+/* IMAGE PLACEHOLDER */
+
+.projectImageIcon {
+    color: #555;
+    font-size: 35px;
+}
+
+.imagePlaceholderText {
+    color: #666;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* PROJECT INFORMATION */
+
+.projectInfo {
+    padding: 25px;
+}
+
+.projectCategory {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: #f8c857;
+    margin-bottom: 12px;
+}
+
+.projectInfo h2 {
+    color: #fff;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.projectDescription {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.projectInfo h4 {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+/* CONTRIBUTION TAGS */
+
+.contributionTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.contributionTags span {
+    background: #292c37;
+    color: #d5d5d5;
+    padding: 7px 11px;
+    border-radius: 7px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+/* UI/UX DESIGN SECTION */
+
+.designSection {
+    margin-top: 70px;
+    padding-top: 40px;
+    border-top: 1px solid #292c37;
+}
+
+.designHeader {
+    margin-bottom: 25px;
+}
+
+.designCard .projectImage {
+    background: #000;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .projectGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .projectHeader h1 {
+        font-size: 26px;
+    }
+
+    .projectSectionTitle {
+        font-size: 22px;
+    }
+
+    .projectImage {
+        height: 180px;
+    }
+
+    .projectInfo {
+        padding: 22px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .projectHeader {
+        margin: 20px 0 35px;
+    }
+
+    .projectHeader h1 {
+        font-size: 23px;
+    }
+
+    .projectHeader p {
+        font-size: 14px;
+    }
+
+    .projectSectionTitle {
+        font-size: 20px;
+    }
+
+    .projectGrid {
+        gap: 20px;
+    }
+
+    .projectInfo {
+        padding: 18px;
+    }
+
+    .projectInfo h2 {
+        font-size: 19px;
+    }
+
+    .projectDescription {
+        font-size: 13px;
+    }
+
+}

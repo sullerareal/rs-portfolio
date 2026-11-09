@@ -1,28 +1,78 @@
+/* ABOUT INTRODUCTION */
+
 .aboutCard {
     background: #1B1D26;
     border-radius: 20px;
     padding: 35px;
     line-height: 1.8;
     color: #d5d5d5;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+}
+
+/* .aboutLabel {
+    color: #f8c857;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+} */
+
+.aboutCard h1 {
+    color: #fff;
+    font-size: 32px;
+    margin: 15px 0;
+}
+
+.aboutCard h1 span {
+    color: #f8c857;
+}
+
+.aboutCard p {
+    color: #d5d5d5;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* FOCUS HEADER */
+
+.focusHeader {
+    text-align: center;
+    margin: 60px 0 30px;
 }
 
 .sectionTitle {
     text-align: center;
-    margin: 60px 0 30px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 28px;
 }
+
+.sectionTitle span {
+    color: #f8c857;
+}
+
+.focusHeader p {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* GRID */
 
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
+    margin-bottom: 40px;
 }
+
+/* FOCUS CARDS */
 
 .card {
     background: #1b1d26;
     padding: 30px;
     border-radius: 20px;
     transition: .3s;
+    border: 1px solid transparent;
 }
 
 .card:hover {
@@ -30,6 +80,51 @@
     border: 1px solid #f8c857;
 }
 
+.focusIcon {
+    width: 50px;
+    height: 50px;
+    background: rgba(248, 200, 87, 0.12);
+    color: #f8c857;
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
 .card h3 {
+    color: #fff;
+    font-size: 18px;
     margin-bottom: 15px;
+}
+
+.card p {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .aboutCard {
+        padding: 25px;
+    }
+
+    .aboutCard h1 {
+        font-size: 26px;
+    }
+
+    .sectionTitle {
+        font-size: 24px;
+    }
+
 }

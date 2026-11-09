@@ -32,7 +32,7 @@
 .stackIcons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    gap: 2px;
     margin-top: 15px;
 }
 
@@ -49,12 +49,7 @@
     object-fit: contain;
     display: block;
     filter: grayscale(100%);
-    transition: transform .3s ease, filter .3s ease;
-}
-
-.tech:hover .tech-logo {
-    filter: grayscale(0%);
-    transform: scale(1.15);
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .mysql-logo {
@@ -62,11 +57,9 @@
     height: auto;
 }
 
-/* 
-.tech:hover .mysql-logo {
-    filter: grayscale(0%);
-    transform: scale(2.15);
-} */
+/* =========================
+   Tech Cards
+========================= */
 
 .tech {
     display: flex;
@@ -75,14 +68,39 @@
     justify-content: center;
     gap: 8px;
     text-align: center;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    border-radius: 14px;
+    /* cursor: pointer; */
+    transition: all 0.3s ease;
 }
 
+.tech:hover {
+    background: rgba(74, 144, 226, 0.08);
+    transform: translateY(-4px);
+    box-shadow:
+        0 0 10px rgba(74, 144, 226, 0.35),
+        0 0 20px rgba(74, 144, 226, 0.2);
+}
+
+.tech:hover .tech-logo {
+    filter: grayscale(0%) drop-shadow(0 0 6px rgba(74, 144, 226, 0.8)) drop-shadow(0 0 12px rgba(74, 144, 226, 0.5));
+    transform: scale(1.15);
+}
 
 .tech p {
     margin: 0;
     font-size: 13px;
-    /* 0.8rem ≈ 12.8px */
+    transition: color 0.3s ease;
 }
+
+.tech:hover p {
+    color: #4a90e2;
+}
+
+/* =========================
+   Social Icons
+========================= */
 
 .tech1 {
     display: flex;
@@ -96,7 +114,6 @@
 
 .tech1 svg {
     font-size: 32px;
-    /* 2rem */
     transition: transform 0.3s ease;
 }
 
@@ -104,6 +121,10 @@
     transform: scale(1.15);
     color: #e7ab1e;
 }
+
+/* =========================
+   Profile
+========================= */
 
 .profile {
     width: 170px;
@@ -163,11 +184,14 @@
     gap: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
 }
 
 .downloadCv:hover {
     background: #22242d;
     border-color: #4a90e2;
+    box-shadow: 0 0 15px rgba(74, 144, 226, 0.3);
 }
 
 .downloadCv p {
@@ -185,9 +209,7 @@
     top: 0;
     left: 0;
     width: 100vw;
-    /* Cannot convert */
     height: 100vh;
-    /* Cannot convert */
     background: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
@@ -204,9 +226,7 @@
 .modal-image {
     max-width: 500px;
     width: 90%;
-    /* Cannot convert */
     max-height: 80vh;
-    /* Cannot convert */
     border-radius: 20px;
     object-fit: cover;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
@@ -219,6 +239,10 @@
     text-align: center;
     font-style: italic;
 }
+
+/* =========================
+   Animations
+========================= */
 
 @keyframes fadeIn {
     from {

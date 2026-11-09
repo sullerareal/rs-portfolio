@@ -159,12 +159,15 @@ function Sidebar() {
                 </div>
 
                 <div className="info">
-                    <div className="downloadCv">
+                    <a
+                        href="/RealSullera.pdf"
+                        download="RealSullera.pdf"
+                        className="downloadCv"
+                    >
                         <FaFile />
                         <p>Download CV</p>
-                    </div>
+                    </a>
                 </div>
-
             </div>
 
 

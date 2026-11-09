@@ -1,0 +1,223 @@
+/* Yellow Line */
+
+.line {
+    width: 70px;
+    height: 4px;
+    background: #f5c542;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+/* Main Card */
+
+.sideQuestCard {
+    background: #1B1D26;
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+}
+
+/* Sections */
+
+.sideQuestSection {
+    margin-bottom: 50px;
+}
+
+.sideQuestSection h2 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    color: white;
+}
+
+/* Image Grid */
+
+.sideQuestGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding-left: 20px;
+}
+
+/* Circular Images */
+
+.sideQuestImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.sideQuestImage:hover {
+    transform: scale(1.08);
+    border-color: #f5c542;
+}
+
+/* ========================= */
+/* Modal */
+/* ========================= */
+
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .9);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+.modalContent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+/* Current Image */
+
+.centerImage {
+    width: 45%;
+    max-width: 500px;
+    max-height: 65vh;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+
+    z-index: 5;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+
+    transition: .35s;
+}
+
+/* Previous & Next Images */
+
+/* Previous & Next Images */
+
+.sideImage {
+    position: absolute;
+
+    width: 140px;
+    max-height: 35vh;
+
+    object-fit: contain;
+
+    opacity: 0.3;
+    cursor: pointer;
+
+    transition: .35s;
+}
+
+.leftImage {
+    left: 12%;
+    transform: scale(.8);
+}
+
+.rightImage {
+    right: 12%;
+    transform: scale(.8);
+}
+
+/* Close Button */
+
+.closeBtn {
+    position: absolute;
+
+    top: 30px;
+    right: 40px;
+
+    background: none;
+    border: none;
+
+    color: white;
+    font-size: 38px;
+
+    cursor: pointer;
+
+    z-index: 10;
+}
+
+.closeBtn:hover {
+    color: #f5c542;
+}
+
+/* Navigation Buttons */
+
+.navBtn {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .2);
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    z-index: 8;
+}
+
+.navBtn:hover {
+    background: #f5c542;
+    color: black;
+}
+
+.left {
+    left: 26%;
+}
+
+.right {
+    right: 26%;
+}
+
+/* Responsive */
+
+@media(max-width:900px) {
+
+    .centerImage {
+        width: 50%;
+        max-width: 300px;
+        max-height: 25vh;
+
+        object-fit: contain;
+
+        border-radius: 12px;
+        /* background: white; */
+
+        box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    }
+
+    .sideImage {
+        display: none;
+    }
+
+    .left {
+        left: 15px;
+    }
+
+    .right {
+        right: 15px;
+    }
+}

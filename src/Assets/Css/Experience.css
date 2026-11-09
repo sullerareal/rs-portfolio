@@ -1,0 +1,352 @@
+/* =========================
+   Experience Container
+========================= */
+
+.experienceContainer {
+    width: 100%;
+    padding: 25px 10px 50px;
+    color: #fff;
+}
+
+/* =========================
+   Header
+========================= */
+
+.experienceHeader {
+    margin-bottom: 45px;
+}
+
+.experienceLabel {
+    color: #f8c857;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.experienceHeader h1 {
+    font-size: 38px;
+    margin: 12px 0;
+    font-weight: 700;
+}
+
+.experienceHeader h1 span {
+    color: #f8c857;
+}
+
+.experienceHeader p {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 650px;
+}
+
+/* =========================
+   Experience Card
+========================= */
+
+.experienceCard {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+/* =========================
+   Timeline
+========================= */
+
+.experienceTimeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 45px;
+}
+
+.timelineIcon {
+    width: 45px;
+    height: 45px;
+    border-radius: 14px;
+    background: rgba(248, 200, 87, 0.12);
+    border: 1px solid rgba(248, 200, 87, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f8c857;
+    font-size: 18px;
+    z-index: 1;
+}
+
+.timelineLine {
+    width: 2px;
+    flex: 1;
+    min-height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(248, 200, 87, 0.5),
+            rgba(248, 200, 87, 0.05));
+}
+
+/* =========================
+   Content
+========================= */
+
+.experienceContent {
+    flex: 1;
+    min-width: 0;
+    background: #1b1d26;
+    border: 1px solid #343642;
+    border-radius: 20px;
+    padding: 28px;
+    transition: all 0.3s ease;
+}
+
+.experienceContent:hover {
+    border-color: rgba(248, 200, 87, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   Experience Heading
+========================= */
+
+.experienceTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.experienceTop h2 {
+    font-size: 22px;
+    margin: 12px 0 6px;
+    color: #fff;
+}
+
+.experienceTop h3 {
+    color: #999;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.experienceDate {
+    color: #f8c857;
+    background: rgba(248, 200, 87, 0.1);
+    border: 1px solid rgba(248, 200, 87, 0.2);
+    border-radius: 20px;
+    padding: 7px 13px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.employmentStatus {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #4caf78;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.statusDot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #4caf78;
+    box-shadow: 0 0 8px rgba(76, 175, 120, 0.7);
+}
+
+.experienceCategory {
+    color: #f8c857;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   Description
+========================= */
+
+.experienceDescription {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.experienceContent h4 {
+    font-size: 14px;
+    margin-bottom: 18px;
+    color: #fff;
+}
+
+/* =========================
+   Responsibilities
+========================= */
+
+.responsibilityList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.responsibilityItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.responsibilityItem svg {
+    color: #f8c857;
+    font-size: 16px;
+    min-width: 16px;
+    margin-top: 3px;
+}
+
+.responsibilityItem strong {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ddd;
+}
+
+.responsibilityItem p {
+    color: #999;
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 5px 0 0;
+}
+
+/* =========================
+   Systems Tags
+========================= */
+
+.systemsHeading {
+    margin-top: 30px;
+}
+
+.systemTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.systemTags span {
+    background: #292c37;
+    border: 1px solid #3a3c46;
+    color: #ccc;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.systemTags span:hover {
+    color: #f8c857;
+    border-color: #f8c857;
+    background: rgba(248, 200, 87, 0.08);
+}
+
+/* =========================
+   Academic Project
+========================= */
+
+.academicCard {
+    margin-top: 10px;
+}
+
+.academicIcon {
+    color: #f8c857;
+    background: rgba(248, 200, 87, 0.1);
+    border-color: rgba(248, 200, 87, 0.3);
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    .experienceContainer {
+        padding: 20px 5px 40px;
+    }
+
+    .experienceHeader h1 {
+        font-size: 30px;
+    }
+
+    .experienceCard {
+        gap: 15px;
+    }
+
+    .experienceTimeline {
+        min-width: 35px;
+    }
+
+    .timelineIcon {
+        width: 35px;
+        height: 35px;
+        font-size: 15px;
+        border-radius: 11px;
+    }
+
+    .experienceContent {
+        padding: 20px;
+    }
+
+    .experienceTop {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .experienceTop h2 {
+        font-size: 19px;
+    }
+
+    .experienceDate {
+        align-self: flex-start;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .experienceHeader h1 {
+        font-size: 26px;
+    }
+
+    .experienceHeader p {
+        font-size: 13px;
+    }
+
+    .experienceContent {
+        padding: 16px;
+        border-radius: 15px;
+    }
+
+    .experienceCard {
+        gap: 10px;
+    }
+
+    .experienceTimeline {
+        min-width: 28px;
+    }
+
+    .timelineIcon {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+
+    .responsibilityItem {
+        gap: 10px;
+    }
+
+    .responsibilityItem strong {
+        font-size: 13px;
+    }
+
+    .responsibilityItem p {
+        font-size: 12px;
+    }
+}
