@@ -1,14 +1,58 @@
+
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+
 import Layout from "../Components/Layout";
 import {
     FaLinkedin,
     FaInstagram,
-    FaTwitter,
     FaFacebook,
 } from "react-icons/fa";
+
 import "../Assets/Css/Contact.css";
 
-
 function Contact() {
+    const form = useRef();
+
+    const [loading, setLoading] = useState(false);
+    const [status, setStatus] = useState("");
+
+    const sendEmail = async (e) => {
+        e.preventDefault();
+
+        setLoading(true);
+        setStatus("");
+
+        try {
+            // 1. Send the visitor's message to your Gmail
+            await emailjs.sendForm(
+                process.env.REACT_APP_EMAILJS_SERVICE_ID,
+                process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+                form.current,
+                process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+            );
+
+            // 2. Send an automatic reply to the visitor
+            await emailjs.sendForm(
+                process.env.REACT_APP_EMAILJS_SERVICE_ID,
+                process.env.REACT_APP_EMAILJS_AUTOREPLY_TEMPLATE_ID,
+                form.current,
+                process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+            );
+
+            // Both emails were successfully sent
+            setStatus("success");
+            form.current.reset();
+
+        } catch (error) {
+            console.error("EmailJS Error:", error);
+            setStatus("error");
+
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return (
         <Layout title="Contact">
             <div className="line"></div>
@@ -16,13 +60,16 @@ function Contact() {
             {/* Hero */}
             <div className="contactCard">
                 <h1 className="contactTitle">
-                    Let's Build Something <br /> Great Together
+                    Let's Build Something <br />
+                    Great Together
                 </h1>
 
                 <p className="contactText">
-                    I'm currently accepting new projects and collaborations, <br></br>with a
-                    special interest in impactful and challenging work.<br></br>
-                    Have a project in mind, a question, or just want to connect?<br></br>
+                    I'm currently accepting new projects and collaborations,
+                    with a special interest in impactful and challenging work.
+                    <br />
+                    Have a project in mind, a question, or just want to connect?
+                    <br />
                     My inbox is always open, and I'd love to hear from you.
                 </p>
             </div>
@@ -34,66 +81,73 @@ function Contact() {
                 </p>
 
                 <div className="socialLinks">
-
-                    <a href="#">
+                    <a href="#" aria-label="Facebook">
                         <FaFacebook />
                     </a>
 
-                    <a href="#">
+                    <a href="#" aria-label="LinkedIn">
                         <FaLinkedin />
                     </a>
 
-                    <a href="#">
+                    <a href="#" aria-label="Instagram">
                         <FaInstagram />
                     </a>
                 </div>
             </div>
 
-            {/* Contact Form*/}
+            {/* Contact Form */}
             <div className="contactCard">
                 <p className="emailTitle">
                     Send me an email
                 </p>
-                <form className="contactForm">
+
+                <form
+                    ref={form}
+                    className="contactForm"
+                    onSubmit={sendEmail}
+                >
                     <div className="leftInputs">
-                        <input type="text" placeholder="Name" />
-                        <input type="email" placeholder="Email" />
-                        <textarea placeholder="Message"></textarea>
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Name"
+                            required
+                        />
 
-                    </div>
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            required
+                        />
 
-
-                    <div className="buttonContainer">
-                        <button type="submit">Send Email</button>
-                    </div>
-                </form>
-            </div>
-
-            {/* Contact Form */}
-            {/* <div className="contactCard emailCard">
-                <p className="emailTitle">
-                    Send me an email
-                </p>
-
-                <div className="emailUnavailable">
-                    <div className="xMark">✕</div>
-                    <p>Temporarily Unavailable</p>
-                </div>
-
-                <form className="contactForm disabledForm">
-                    <div className="leftInputs">
-                        <input type="text" placeholder="Name" disabled />
-                        <input type="email" placeholder="Email" disabled />
-                        <textarea placeholder="Message" disabled></textarea>
+                        <textarea
+                            name="message"
+                            placeholder="Message"
+                            required
+                        ></textarea>
                     </div>
 
                     <div className="buttonContainer">
-                        <button type="submit" disabled>
-                            Send Email
+                        <button type="submit" disabled={loading}>
+                            {loading ? "Sending..." : "Send Email"}
                         </button>
                     </div>
+
+                    {status === "success" && (
+                        <p className="emailSuccess">
+                            Your message has been sent successfully!
+                            A confirmation email has also been sent to you.
+                        </p>
+                    )}
+
+                    {status === "error" && (
+                        <p className="emailError">
+                            Something went wrong. Please try again later.
+                        </p>
+                    )}
                 </form>
-            </div> */}
+            </div>
         </Layout>
     );
 }

@@ -189,8 +189,8 @@ function Sidebar() {
 
                 <div className="info">
                     <a
-                        href="/RealSullera.pdf"
-                        download="RealSullera.pdf"
+                        href="/RealSullera1.pdf"
+                        download="RealSullera1.pdf"
                         className="downloadCv"
                     >
                         <FaFile />

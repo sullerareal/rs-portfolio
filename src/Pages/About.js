@@ -102,7 +102,7 @@ function About() {
 
                 <p>
                     These are the areas where I have gained experience
-                    through my professional work and academic projects.
+                    through my professional work.
                 </p>
             </div>
 
